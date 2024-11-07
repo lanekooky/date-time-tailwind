@@ -3,4 +3,4 @@
 Styling a clock using Tailwind CSS.
 
 ## Sources
-*[Source](URL)
+*Github Copilot
