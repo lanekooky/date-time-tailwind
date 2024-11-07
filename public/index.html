@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind CSS Starter Kit</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock</title>
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 
-    <script src="time.js" defer></script>
-    <script src="date.js" defer></script>
+  <script src="time.js" defer></script>
+  <script src="date.js" defer></script>
 
 </head>
-<body class ="h-screen flex items-center justify-center">
+<body class="h-screen flex items-center justify-center bg-gray-100">
 
-    <main>
+  <main class="text-center space-y-8 bg-gradient-to-r from-blue-200 via-purple-300 to-pink-400 p-8 border border-blue-400 rounded-lg">
+    <h1 class = "text-5xl font-bold animate-bounce">Welcome, and see the time!</h1>
   
-        <!-- Time -->
-        <time class="time container mx-auto block grid lg:grid-cols-4 md:grid-cols-3 font-mono">
-                <data class="hours text-9xl">HH</data> :
-                <data class="minutes text-9xl">MM</data> :
-                <data class="seconds text-xs">SS</data>
-                <data class="amOrPM">AM/PM</data>
-            </time>
-      
-          
-        <!-- Date -->
-        <time class="date container mx-auto block grid lg:grid-cols-4 md:grid-cols-3 font-mono">
-          <data class="month">Month</data>
-          <data class="dayOfMonth">00</data>,
-          <data class="year">0000</data> -
-          <data class="dayOfWeek">SMTWTFS</data>
-        </time>
-      
-      </main>
+    <!-- Time -->
+    <time class="time container mx-auto block grid grid-cols-6 gap-4 font-mono text-gray-800"></time>
+      <data class="hours text-9xl font-bold col-span-1">HH</data>
+      <span class="text-9xl font-bold col-span-1">:</span>
+      <data class="minutes text-9xl font-bold col-span-1">MM</data>
+      <span class="text-9xl font-bold col-span-1">:</span>
+      <data class="seconds text-9xl font-bold col-span-1">SS</data>
+      <data class="amOrPM text-5xl font-semibold col-span-1 text-center">AM/PM</data>
+    </time>
     
+    <!-- Date -->
+    <time class="date container mx-auto block flex space-x-2 font-mono text-gray-800"></time>
+      <data class="dayOfWeek text-3xl font-semibold">SMTWTFS</data>,
+      <data class="month text-3xl font-semibold">Month</data>
+      <data class="dayOfMonth text-3xl font-semibold">00</data>,
+      <data class="year text-3xl font-semibold">0000</data>
+    </time>
+    
+  </main>
+  
 </body>
 </html>

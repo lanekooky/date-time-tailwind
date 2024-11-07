@@ -23,7 +23,7 @@ const theClockApp = () => {
     Format Data
     ************/
     // Get AM or PM
-    const gotAmOrPM = gotHours >= 12 ? 'PM' : 'AM';
+    let gotAmOrPM = gotHours >= 12 ? 'PM' : 'AM';
     // Get 12 hour format
     gotHours = gotHours % 12 || 12;
     // Optionally, append zero to single digit hours
@@ -56,6 +56,8 @@ const theClockApp = () => {
     seconds.innerText = gotSeconds;
     // Set AM or PM
     amOrPM.innerText = gotAmOrPM;
+
+    console.log(gotAmOrPM);
       
     }
     
